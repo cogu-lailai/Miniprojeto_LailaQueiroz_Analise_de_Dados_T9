@@ -68,15 +68,3 @@ Os resultados abaixo foram observados na base enviada, após os tratamentos desc
 Este foi um primeiro exercício, então a análise é simples. Eu ainda precisaria conferir com a origem da base se as linhas repetidas são erros ou se algumas representam itens legítimos. Também seria interessante entender melhor o significado de cada coluna e confirmar se os valores ausentes devem ser excluídos ou preenchidos.
 
 O arquivo não tem preços nem dimensões físicas, então não foi possível analisar faturamento ou dimensões de produtos.
-
-## 9. Versionamento no GitHub
-
-O projeto deve ser enviado para um repositório público com um nome parecido com `Miniprojeto_NomeAluno_Analise_de_Dados_T1`.
-
-Para mostrar o desenvolvimento, posso fazer commits separados conforme avanço, por exemplo:
-- `Adiciona arquivos iniciais do projeto`
-- `Adiciona leitura e diagnóstico da base`
-- `Adiciona limpeza e estatísticas`
-- `Finaliza README e conclusões`
-
-Os commits devem refletir as alterações feitas de verdade. Antes de entregar, preciso confirmar que o repositório está público e enviar o link no AVA.

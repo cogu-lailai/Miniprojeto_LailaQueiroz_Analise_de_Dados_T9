@@ -61,7 +61,7 @@ def carregar_arquivo(caminho):
 def main():
     # Primeiro, verifico se o arquivo existe.
     if not arquivo_csv.exists():
-        print("Não encontrei Base Varejo.csv.")
+        print("Não encontrei Base_Varejo.csv.")
         print("Coloque o arquivo CSV na mesma pasta deste programa.")
         return
 
@@ -89,6 +89,8 @@ def main():
 
     for coluna in colunas_de_texto:
         dados[coluna] = dados[coluna].astype("string").str.strip()
+        # Troca vários espaços seguidos por um só (expressão regular)
+        dados[coluna] = dados[coluna].str.replace(r"\s+", " ", regex=True)
         dados[coluna] = dados[coluna].replace("", pd.NA)
 
     # Converto a data para um formato que o Python reconhece como data.
@@ -133,6 +135,13 @@ def main():
 
     print("Linhas removidas por falta de informação essencial:", quantidade_removida)
     print("Registros depois da limpeza:", len(dados))
+
+    # Regra do CO_ID: cada compra deve ter uma única data e um único cliente
+    datas_por_compra = dados.groupby("CO_ID")["DATA"].nunique()
+    clientes_por_compra = dados.groupby("CO_ID")["CL_ID"].nunique()
+    print("\nCompras com mais de uma data:", (datas_por_compra > 1).sum())
+    print("Compras com mais de um cliente:", (clientes_por_compra > 1).sum())
+    print("Se os dois números forem 0, a regra está correta.")
     print("\nTipos de dados depois da limpeza:")
     print(dados.dtypes)
 

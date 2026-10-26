@@ -62,9 +62,3 @@ Os resultados abaixo foram observados na base enviada, após os tratamentos desc
 6. A base não tem coluna de preço ou valor de venda. Por isso, os resultados mostram contagens de registros, não qual categoria vendeu mais em dinheiro.
 
 **Observação:** os números de insights são resultados da execução anterior da análise. Se o código ou os critérios de limpeza forem alterados, execute novamente e confira se os valores continuam iguais.
-
-## 8. Limitações e próximos passos
-
-Este foi um primeiro exercício, então a análise é simples. Eu ainda precisaria conferir com a origem da base se as linhas repetidas são erros ou se algumas representam itens legítimos. Também seria interessante entender melhor o significado de cada coluna e confirmar se os valores ausentes devem ser excluídos ou preenchidos.
-
-O arquivo não tem preços nem dimensões físicas, então não foi possível analisar faturamento ou dimensões de produtos.
